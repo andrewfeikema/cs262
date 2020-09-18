@@ -1,0 +1,4 @@
+Project proposals:
+
+    A COVID contact tracing app using the Apple/Google Exposure Notification API. The application would be anonymous, as is the API, but integrations with Calvin-specific information could be beneficial as well.
+    An ‘unpredictable’ application satirizing a certain industry or business. The app should be extremely frustrating

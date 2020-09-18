@@ -1,0 +1,20 @@
+About me:
+
+    Demographics
+        I am a Junior Computer Science BCS major. In 112 and 212 I received an A
+    
+    Technical
+
+        My most rigorous technical experience was working in my software development internship last summer. Within a cloud computing environment, I gained experience with NoSQL databases, Microservices, NodeJS, event-driven architecture. I have briefly studied SQL databases, and I am excited to learn how to use that structure. I have also worked with REST APIs and GraphQL APIs.
+        I have worked with all of these tools
+            Slack- more than 2 years in casual & professional settings
+            Trello- used with a student organization to track deadlines and progress
+            Git and GitHub- used in summer internship for version control of code base for templates, microservices, and frontend platform to store personal projects 
+        
+    Interest
+        I’m interested in Ben DeVries’ idea for the deskie package notification service. I see great potential in use for cloud services in storing, processing, and exchanging information, and using event-driven architecture for notifications.  
+    
+    Personality
+
+        My top big-five personality type is Openness. I took the test earlier and submitted numerical responses to the google form.
+        I’d like to work with Ben Devries, Emily Costa, and Coleman Ulry. We liked working together in Discrete Mathematics occasionally, and we’d like to do it for this project.
