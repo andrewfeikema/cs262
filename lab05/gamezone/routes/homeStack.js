@@ -12,7 +12,7 @@ export default function HomeStack( {navigation} ) {
             headerStyle:{backgroundColor:'#ddd'}
         }}>
             <Stack.Screen
-                name="GameZone"
+                name="GameZone Home"
                 component={Home}
                 options={{
                     headerLeft: () =>  <Header navigation={navigation} />
