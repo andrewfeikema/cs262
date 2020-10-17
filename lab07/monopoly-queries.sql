@@ -25,3 +25,6 @@ ORDER BY score DESC
 SELECT *
   FROM Player, PlayerGame, Game
   ;
+
+-- Get all of player 1's properties
+SELECT * FROM Property WHERE ownerID = 1;
