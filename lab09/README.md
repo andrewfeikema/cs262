@@ -1,39 +1,23 @@
-# node-js-getting-started
+# CS 262 Monopoly Webservice
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+This is the data service application for the 
+[CS 262 sample Monopoly project](https://github.com/calvin-cs262-organization/monopoly-project),
+ which is deployed here:
+          
+- <https://cs262-monopoly-service.herokuapp.com/>
 
-This application supports the [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+It is based on the standard Heroku with Node.js tutorial.
 
-## Running Locally
+- <https://devcenter.heroku.com/articles/getting-started-with-nodejs>  
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
+The database is relational with the schema specified in the `sql/` sub-directory
+and is hosted on [ElephantSQL](https://www.elephantsql.com/). The database server,
+user and password are stored as Heroku configuration variables rather than in this 
+(public) repo.
 
-```sh
-$ git clone https://github.com/heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```
-$ heroku create
-$ git push heroku main
-$ heroku open
-```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+We implement this sample service as a separate repo to simplify Heroku integration;
+it&rsquo;s easier to auto-deploy a separate repo to Heroku. For your team project&rsquo;s 
+data service, configure your Heroku app to auto-deploy from the master/main branch 
+of your service repo. See the instructions for how to do this under the 
+&ldquo;Deploy&rdquo; tab in your Heroku application&rsquo;s dashboard.
+ 
