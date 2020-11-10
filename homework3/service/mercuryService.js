@@ -16,7 +16,8 @@ const db = pgp({
     port: 5432,
     database: process.env.USER,
     user: process.env.USER,
-    password: process.env.PASSWORD
+    password: process.env.PASSWORD,
+    
 });
 
 // Configure the server and its routes.
@@ -27,18 +28,24 @@ const port = process.env.PORT || 3000;
 const router = express.Router();
 router.use(express.json());
 
-router.get("/", readHelloMessage);
-router.get("/people", readPeople);
-router.get("/people/:id", readPerson);
-router.put("/people/:id", updatePerson);
+router.get("/", readAllPackages);
+//router.get("/people/:id", readPerson);
+//router.put("/people/:id", updatePerson);
 //router.post('/people', createPerson);
 //router.delete('/people/:id', deletePerson);
-router.get("/packages", readPackages);
-router.get("/packages/:id", readPackage);
-router.put("/packages/:id", updatePackage);
+//router.get("/packages", readPackages);
+//router.get("/packages/:id", readPackage);
+//router.put("/packages/:id", updatePackage);
 //router.post('/packages', createPackage);
 //router.delete('/packages/:id', deletePackage);
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", '*');
+    res.header("Access-Control-Allow-Credentials", true);
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
+    next();
+});
 app.use(router);
 app.use(errorHandler);
 app.listen(port, () => console.log(`Listening on port ${port}`));
@@ -60,12 +67,8 @@ function returnDataOr404(res, data) {
     }
 }
 
-function readHelloMessage(req, res) {
-    res.send('Hello, Mercury Package service!');
-}
-
-function readPeople(req, res, next) {
-    db.many("SELECT * FROM Person, Package WHER Package.Recipient = Person.emailPrefix;")
+function readAllPackages(req, res) {
+    db.many("SELECT * FROM Package, Person WHERE Package.Recipient = Person.emailPrefix;")
         .then(data => {
             res.send(data);
         })

@@ -22,7 +22,7 @@ const db = pgp({
 });
 
 // Send the SQL command directly to Postgres.
-db.many("SELECT * FROM Player")
+db.many("SELECT * FROM Package")
     .then(function (data) {
         console.log(data);
     })
