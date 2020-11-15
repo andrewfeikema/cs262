@@ -1,0 +1,8 @@
+In README.md:
+
+Spelling error in 'notifying'
+Grammar error in "for 'a' recipient"
+
+In mercuryService.js: 3 similar instances of lacking indentation in database functions. 
+
+Both issues resolved.
